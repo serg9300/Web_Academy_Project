@@ -57,7 +57,7 @@ def main():
     dispatcher.add_handler(CommandHandler('help', helpCommand))
     dispatcher.add_handler(MessageHandler(Filters.text, textMessage))
     dispatcher.add_handler(CommandHandler('doggy',doggy))
-    updater.start_polling(clean=True)
+    updater.start_polling(clean=True, timeout=10)
     updater.idle()
 
 if __name__ == '__main__':
